@@ -1,0 +1,693 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+:root {
+  --yellow: #f9ca24;
+  --black: #000;
+  --grey: #171717;
+  --white: #fff;
+}
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  /* text-transform: capitalize; */
+  transition: all 0.2s linear;
+}
+
+*::selection {
+  background: var(--white);
+  color: #333;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  width: 1.4rem;
+}
+html::-webkit-scrollbar-track {
+  background: #222;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--white);
+}
+body {
+  background: #111;
+  overflow-x: hidden;
+  padding-left: 35rem;
+}
+section {
+  min-height: 100vh;
+  padding: 1rem;
+}
+.btn {
+  padding: 0.7rem 3rem;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 2rem;
+  border-radius: 5rem;
+}
+
+.btn i {
+  padding: 0 0.5rem;
+  font-size: 1.8rem;
+}
+
+.btn:hover {
+  background: var(--white);
+  color: var(--grey);
+}
+
+.heading {
+  text-align: center;
+  margin: 0 6rem;
+  font-size: 4rem;
+  padding: 1rem;
+  border-bottom: 0.1rem solid #fff4;
+  color: #fff;
+}
+.heading span {
+  color: var(--yellow);
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 35rem;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+}
+header .user .contact {
+  display: flex;
+  float: left;
+  justify-content: right;
+  padding-right: 10rem;
+}
+header .user .contact .info h6 {
+  display: flex;
+  align-items: left;
+  font-size: 1rem;
+  color: #eee;
+  padding: 1rem 0;
+  font-weight: normal;
+}
+header .user .contact .info i {
+  padding-right: 1rem;
+  color: var(--yellow);
+}
+header .user img {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 0.5rem solid var(--grey);
+}
+header .user .name {
+  font-size: 3.5rem;
+  color: #fff;
+}
+header .user a,
+.icon-link-container a {
+  font-size: 2.5rem;
+  padding: 10px;
+  align-items: center;
+}
+header .user .post {
+  font-size: 2rem;
+  color: #eee;
+}
+
+header .navbar {
+  width: 100%;
+}
+header .navbar ul {
+  list-style: none;
+  padding: 1rem 3rem;
+}
+
+header .navbar ul li a {
+  display: block;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  background: #333;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 5rem;
+}
+
+header .social-media {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+header .navbar ul li a:hover {
+  background: var(--white);
+  color: var(--grey);
+}
+header .social-media .fab {
+  font-weight: normal;
+}
+header .social-media .fab {
+  font-family: "Font Awesome 5 Brands";
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+header .social-media a {
+  color: #7a7c80;
+  text-decoration: none;
+}
+header .social-media a:hover {
+  color: #fff;
+}
+#menu {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background: #333;
+  color: #fff;
+  font-size: 2.5rem;
+  z-index: 1000;
+  display: none;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+}
+.home {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  padding: 0 15rem;
+}
+.home h3 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+.home h1 {
+  font-size: 5rem;
+  color: #fff;
+}
+.home h1 span {
+  color: var(--yellow);
+}
+.home p {
+  font-size: 2rem;
+  color: #eee;
+  padding: 1rem 0;
+}
+
+.about p {
+  font-size: 2rem;
+  color: #eee;
+  padding: 1rem 0;
+}
+.about .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.about .row .info {
+  flex: 1 1 48rem;
+  padding: 2rem 1rem;
+  padding-left: 6rem;
+}
+.about .row .info h3 {
+  font-size: 2rem;
+  color: var(--yellow);
+  padding: 1rem 0;
+  font-weight: normal;
+}
+.about .row .info h3 span {
+  color: #eee;
+  padding: 0 0.5rem;
+}
+
+.about .row .counter {
+  flex: 1 1 48rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about .row .counter .box {
+  width: 20rem;
+  background: #222;
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.about .row .counter .box h3 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.contact .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact .row .content {
+  flex: 1 1 30rem;
+  padding: 4rem;
+  padding-bottom: 4rem;
+  margin-bottom: auto;
+}
+.skills .software-skills-main-div {
+  -webkit-font-smoothing: antialiased;
+  font: 19px/23px Montserrat, sans-serif;
+  color: #fff !important;
+  margin-left: 8rem;
+  margin-right: 8rem;
+  margin-top: 8rem;
+}
+.skills .software-skills-main-div ul {
+  -webkit-font-smoothing: antialiased;
+  font: 19px/23px Montserrat, sans-serif;
+  color: #fff !important;
+  font-size: 3rem;
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 3rem;
+  padding-left: 0;
+  text-align: center;
+}
+.skills .software-skills-main-div ul li {
+  -webkit-font-smoothing: antialiased;
+  font: 19px/23px Montserrat, sans-serif;
+  color: #fff !important;
+  font-size: 2rem;
+  list-style: none;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.skills .software-skills-main-div ul li i:hover {
+  color: #fff;
+}
+.skills .software-skills-main-div ul li i {
+  font: 19px/23px Montserrat, sans-serif;
+  font-size: 5rem;
+  list-style: none;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+  color: #868e96;
+}
+.skills .software-skills-main-div ul li i p {
+  -webkit-font-smoothing: antialiased;
+  font: 19px/23px Montserrat, sans-serif;
+  list-style: none;
+  color: #868e96;
+  font-size: 5rem;
+  margin-top: 5rem;
+}
+.skills .dev-icons .software-skill-inline {
+  display: inline-block;
+  padding-left: 2rem;
+}
+.skills .proficiency {
+  padding-top: 5rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+.skills .proficiency h1 {
+  /* font-size: 3rem; */
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  font: 19px/23px Montserrat, sans-serif;
+  color: #fff !important;
+  line-height: 4rem;
+  font-size: 40px;
+  font-weight: 400;
+}
+.skills .proficiency .skill {
+  -webkit-font-smoothing: antialiased;
+  font: 19px/23px Montserrat, sans-serif;
+  color: #fff !important;
+  line-height: 3.5vw;
+  margin-top: 2rem;
+}
+
+.skills .proficiency .skill p {
+  -webkit-font-smoothing: antialiased;
+  font: 19px/23px Montserrat, sans-serif;
+  line-height: 3.5vw;
+  font-size: 2rem;
+  color: var(--yellow) !important;
+}
+.skills .proficiency .skill .meter {
+  -webkit-font-smoothing: antialiased;
+  font: 19px/23px Montserrat, sans-serif;
+  color: var(--grey) !important;
+  line-height: 3vw;
+  background: #ecdfdf;
+  border-radius: 25px;
+  height: 10px;
+  position: relative;
+}
+.skills .proficiency .skill .meter span {
+  -webkit-font-smoothing: antialiased;
+  font: 19px/23px Montserrat, sans-serif;
+  color: var(--grey) !important;
+  line-height: 3vw;
+  background-color: #aaa5ff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 6px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 6px;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 90%;
+}
+.project .repo-cards-div-main {
+  -webkit-font-smoothing: antialiased;
+  font: 19px/23px Montserrat, sans-serif;
+  color: #fff !important;
+  grid-gap: 1rem 1rem;
+  display: grid;
+  gap: 1rem 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  margin-top: 3rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  margin-bottom: 3rem;
+}
+
+.project .repo-cards-div-main .dark-card-mode-repo-card-div {
+  -webkit-font-smoothing: antialiased;
+  font: 19px/23px Montserrat, sans-serif;
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  background-color: #171c28;
+  color: #fff;
+}
+.project .repo-cards-div-main .dark-card-mode-repo-card-div:hover {
+  opacity: 0.8;
+  background: rgba(0, 0, 0, 0.692);
+  box-shadow: 0px 0px 10px var(--white);
+}
+.project .repo-cards-div-main .dark-card-mode-repo-card-div .repo-name-div {
+  -webkit-font-smoothing: antialiased;
+  font: 19px/23px Montserrat, sans-serif;
+  cursor: pointer;
+  color: #fff;
+  align-items: center;
+  display: block;
+}
+
+.project
+  .repo-cards-div-main
+  .dark-card-mode-repo-card-div
+  .repo-name-div
+  .repo-name {
+  -webkit-font-smoothing: antialiased;
+  font: 19px/23px Montserrat, sans-serif;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 700;
+  height: 30px;
+  letter-spacing: -0.5px;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #fff;
+}
+.project
+  .repo-cards-div-main
+  .dark-card-mode-repo-card-div
+  .repo-name-div
+  .repo-description {
+  -webkit-font-smoothing: antialiased;
+  font: 19px/23px Montserrat, sans-serif;
+  cursor: pointer;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 1rem;
+}
+.project
+  .repo-cards-div-main
+  .dark-card-mode-repo-card-div
+  .repo-name-div
+  .languages {
+  font-size: 13px;
+  margin-top: 3rem;
+}
+.btn1 {
+  padding: 0.7rem 3rem;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 5rem;
+  margin-left: 42.5%;
+}
+
+.btn1 i {
+  padding: 0 0.5rem;
+  font-size: 1.8rem;
+}
+
+.btn1:hover {
+  background: var(--white);
+  color: var(--grey);
+}
+.skills .row1,
+.row2 {
+  display: flex;
+  padding: 1rem 0;
+}
+.skills .row1 .skillset1,
+.skillset2,
+.skillset3 {
+  display: flex;
+}
+.skills .row1 .skill-name {
+  padding-left: 8rem;
+  color: var(--yellow);
+  font-size: 3rem;
+}
+.skills .row2 .skill-name {
+  padding-left: 8rem;
+  color: var(--yellow);
+  font-size: 3rem;
+}
+
+.skills .row3 .skill-name {
+  padding-left: 8rem;
+  color: var(--yellow);
+  font-size: 3rem;
+}
+
+.skills .row1 .skill-icons {
+  padding-left: 30rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+.skills .row2 .skill-icons {
+  padding-left: 29rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+.skills .row3 .skill-icons {
+  padding-left: 11rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+.skills .row1 .skill-icons .icon1 img {
+  height: 10rem;
+  width: 10rem;
+}
+.skills .row1 .skill-icons .icon2 img {
+  margin-left: auto;
+  height: 10rem;
+  width: 10rem;
+}
+
+.skills .row1 .skill-icons .icon3 img {
+  margin-left: auto;
+  height: 10rem;
+  width: 10rem;
+}
+.skills .row1 .skill-icons .icon4 img {
+  margin-left: auto;
+  height: 10rem;
+  width: 10rem;
+}
+.skills .row1 .skill-icons .icon5 img {
+  margin-left: auto;
+  height: 10rem;
+  width: 10rem;
+}
+.skills .row1 .skill-icons .icon6 img {
+  margin-left: auto;
+  height: 10rem;
+  width: 10rem;
+}
+.skills .row1 .skill-icons .icon7 img {
+  margin-left: auto;
+  height: 10rem;
+  width: 10rem;
+}
+
+.skills .row2 .skill-icons .icon1 img {
+  margin-left: auto;
+  height: 10rem;
+  width: 10rem;
+}
+
+.skills .row2 .skill-icons .icon2 img {
+  margin-left: auto;
+  height: 10rem;
+  width: 10rem;
+}
+.skills .row2 .skill-icons .icon3 img {
+  margin-left: auto;
+  height: 10rem;
+  width: 10rem;
+}
+.skills .row2 .skill-icons .icon4 img {
+  margin-left: auto;
+  height: 10rem;
+  width: 10rem;
+}
+
+.skills .row3 .skill-icons .icon1 img {
+  height: 10rem;
+  width: 10rem;
+}
+.skills .row3 .skill-icons .icon2 img {
+  margin-left: auto;
+  height: 10rem;
+  width: 10rem;
+}
+
+.skills .row3 .skill-icons .icon3 img {
+  margin-left: auto;
+  height: 10rem;
+  width: 10rem;
+}
+.contact .row .content .title {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+/* .contact {
+  margin-bottom: 5rem;
+} */
+.contact .row .content .info h3 {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: #eee;
+  padding: 1rem 0;
+  font-weight: normal;
+}
+.contact .row .content .info i {
+  padding-right: 1rem;
+  color: var(--yellow);
+}
+
+.copyright h1 {
+  background: #fff;
+  align-items: center;
+  font-family: source sans pro, open sans, helvetica neue, Helvetica, Arial,
+    sans-serif;
+  font-weight: 3000;
+  line-height: 5;
+  color: black;
+  text-align: center;
+  font-size: 5px;
+  box-sizing: inherit;
+  position: inherit;
+}
+.top {
+  position: fixed;
+  bottom: 7.5rem;
+  right: 2rem;
+  z-index: 100;
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 45%;
+  }
+  .home {
+    padding: 1rem 4rem;
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+    left: -120%;
+  }
+  #menu {
+    display: block;
+  }
+  header.toggle {
+    left: 0%;
+  }
+  body {
+    padding: 0;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 400px) {
+  header {
+    width: 100vw;
+  }
+  .heading {
+    margin: 0 3rem;
+  }
+  .about .row .counter .box {
+    width: 100%;
+  }
+  .contact .row form {
+    margin: 3rem 0;
+  }
+}
